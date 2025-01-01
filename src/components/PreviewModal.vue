@@ -72,6 +72,35 @@ const onDownload = () => {
   gap: 15px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .modal-content {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+
+  .resolution-selector {
+    color: #fff;
+  }
+
+  .resolution-selector select {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #444;
+  }
+
+  .resolution-selector select:focus {
+    border-color: #42b883;
+  }
+
+  .close-btn {
+    background-color: #444;
+  }
+
+  .close-btn:hover {
+    background-color: #555;
+  }
+}
+
 .generated-image {
   max-width: 300px;
   max-height: 300px;

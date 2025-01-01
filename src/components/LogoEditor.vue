@@ -19,20 +19,22 @@ defineProps<{
   width: 100px;
   height: 100px;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   display: block;
+  position: relative;
 }
 
 .logo-text {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 5%;
+  right: 5%;
+  transform: translate(0, 0);
   background-color: #000;
   color: #fff;
   padding: 2px 4px;
@@ -48,7 +50,14 @@ defineProps<{
   min-height: 14px;
   line-height: 1 !important;
   box-sizing: border-box;
-  transform: translate(0, 0);
-  margin: 0;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 10px;
+    padding: 2px 3px;
+    min-height: 12px;
+  }
 }
 </style> 

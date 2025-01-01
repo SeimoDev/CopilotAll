@@ -111,10 +111,11 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  min-height: 100%;
   padding-top: 80px;
   justify-content: flex-start;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .logo-container {
@@ -153,10 +154,15 @@ onMounted(async () => {
 .input-group {
   display: flex;
   gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .input-box {
-  width: 300px;
+  flex: 1;
+  min-width: 0;
   padding: 8px 12px;
   border: 2px solid #42b883;
   border-radius: 6px;
@@ -197,5 +203,61 @@ onMounted(async () => {
 
 .github-icon {
   fill: #24292f;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 40px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .github-link {
+    top: 10px;
+    right: 10px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 15px;
+    width: 85%;
+    max-width: 300px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .generate-btn {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 0 auto;
+  }
+
+  .input-box {
+    width: 85%;
+    padding: 12px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-top: 30px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .input-box {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #42b883;
+  }
+
+  .input-box::placeholder {
+    color: #888;
+  }
+
+  .github-icon {
+    fill: #fff;
+  }
 }
 </style>
