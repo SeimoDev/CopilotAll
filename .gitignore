@@ -1,4 +1,25 @@
-# Logs
+# 依赖
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# 测试覆盖率
+/coverage
+
+# Vite构建输出
+/dist
+/dist-ssr
+
+# 本地环境文件
+*.local
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 日志文件
 logs
 *.log
 npm-debug.log*
@@ -7,14 +28,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# 编辑器目录和文件
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 .idea
 .DS_Store
 *.suo
@@ -22,3 +41,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# 类型检查缓存
+*.tsbuildinfo
+
+# 可选 - Storybook构建输出
+storybook-static
+
+# 可选 - ESLint缓存
+.eslintcache
+
+# 可选 - Stylelint缓存
+.stylelintcache
+
+# 可选 - PWA资源
+dev-dist
